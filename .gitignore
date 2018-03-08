@@ -33,7 +33,6 @@ hs_err_pid*
 
 # User-specific stuff:
 .idea/**/tasks.xml
-.idea/dictionaries
 
 # Sensitive or high-churn files:
 .idea/**/dataSources/
@@ -42,7 +41,6 @@ hs_err_pid*
 .idea/**/dataSources.local.xml
 .idea/**/sqlDataSources.xml
 .idea/**/dynamic.xml
-.idea/**/uiDesigner.xml
 
 # Gradle:
 .idea/**/libraries
@@ -93,3 +91,7 @@ gradle-app.setting
 .idea/
 build/
 /MP20182_PHW02.iml
+
+# pandoc files
+pandoc.md
+metadata.yaml

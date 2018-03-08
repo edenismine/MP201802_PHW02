@@ -46,9 +46,10 @@ patterns](https://g.co/kgs/ycnzMg):
 
 The following design patterns were used:
 
-- Singleton for the main chat instance.
-- Template so users could display notifications in their language.
-- Observer so users would be updated whenever the chat received an update.
+  - Singleton for the main chat instance.
+  - Template so users could display notifications in their language.
+  - Observer so users would be updated whenever the chat received an
+    update.
 
 ![UML class diagram](media/classes.png)
 
@@ -67,15 +68,25 @@ this increments encapsulation, and clarifies its structure.
 
 ## Implementation
 
-As depicted above, chat users combine the observer and template design patterns. The result is an abstract class that provides an update method that is preserves certain algorithmic isomorphism throughout its subclasses which, via the abstract methods, should be able to correctly display all sorts of chat notifications.
+As depicted above, chat users combine the observer and template design
+patterns. The result is an abstract class that provides an update method
+that is preserves certain algorithmic isomorphism throughout its
+subclasses which, via the abstract methods, should be able to correctly
+display all sorts of chat notifications.
 
 ### Use of the observer pattern
 
-In this application, the `MultilingualChat` class (which implements Chat) and its inner user subclasses complete the Subject-Observer duality. The chat has a list of users which are notified every time the chat receives an update via a `ChatNotification`.
+In this application, the `MultilingualChat` class (which implements
+Chat) and its inner user subclasses complete the Subject-Observer
+duality. The chat has a list of users which are notified every time the
+chat receives an update via a `ChatNotification`.
 
 ### Use of the template pattern
 
-In this application, the `AbstractChatUser` class provides the template method `update` which utilizes this class' abstract methods in order to accomplish homogeneous behavior across its subclasses provided they have implemented them correctly.
+In this application, the `AbstractChatUser` class provides the template
+method `update` which utilizes this class’ abstract methods in order to
+accomplish homogeneous behavior across its subclasses provided they have
+implemented them correctly.
 
 ## Building and running the program
 
@@ -88,11 +99,11 @@ from the command prompt instead.
 
 Some of the most common tasks are:
 
-1. `./gradlew build`, compiles and creates the outputs of this project.
-2. `./gradlew javadoc`, generates the program’s documentation and puts
+1.  `./gradlew build`, compiles and creates the outputs of this project.
+2.  `./gradlew javadoc`, generates the program’s documentation and puts
     it inside `build/docs/javadoc`.
-3. `./gradlew run`, builds the program and runs the application.
-4. `./gradlew clean`, deletes all files and folders generated during
+3.  `./gradlew run`, builds the program and runs the application.
+4.  `./gradlew clean`, deletes all files and folders generated during
     the build process (except the .gradle directory).
 
 ## Acknowledgements
@@ -100,10 +111,10 @@ Some of the most common tasks are:
 For more information on the tools used to build, create and run this
 program refer to the following links:
 
-- [Pandoc](https://pandoc.org/) is a Haskell library for converting
-  from one markup format to another, and a command-line tool that uses
-  this library. Pandoc was used to keep this README file consistent.
-- [Gradle](https://gradle.org/) was used to create the build script.
-- [JetBrains’ IntelliJ IDEA](https://www.jetbrains.com/idea/) was used
-  as the primary editor. Its diagramming utility also came in handy to
-  produce the application’s class diagram.
+  - [Pandoc](https://pandoc.org/) is a Haskell library for converting
+    from one markup format to another, and a command-line tool that uses
+    this library. Pandoc was used to keep this README file consistent.
+  - [Gradle](https://gradle.org/) was used to create the build script.
+  - [JetBrains’ IntelliJ IDEA](https://www.jetbrains.com/idea/) was used
+    as the primary editor. Its diagramming utility also came in handy to
+    produce the application’s class diagram.
