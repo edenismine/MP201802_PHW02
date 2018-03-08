@@ -9,9 +9,13 @@ repositories {
     jcenter()
 }
 
+javadoc{
+    options.memberLevel = JavadocMemberLevel.PRIVATE
+}
+
 dependencies {
 }
 
 // Define the main class for the application
-mainClassName = 'mx.unam.fciencias.myp.App'
+mainClassName = 'mx.unam.fciencias.myp.chat.controllers.ChatDemo'
 
